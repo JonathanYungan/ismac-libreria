@@ -35,6 +35,6 @@ public class Categoria {
 				+ "]";
 	}
 	
-	
+//hla	
 }
 	
