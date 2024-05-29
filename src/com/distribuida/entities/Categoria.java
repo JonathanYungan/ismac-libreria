@@ -34,7 +34,6 @@ public class Categoria {
 		return "Categoria [idCategoria=" + idCategoria + ", categoria=" + categoria + ", descripcion=" + descripcion
 				+ "]";
 	}
-	
-//hla	
+	//hola como estan muchachos
 }
 	
