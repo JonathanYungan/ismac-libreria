@@ -20,7 +20,7 @@ public class ClienteDAOompl implements ClienteDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+//xl
 	@Override
 	public void add(Cliente cliente) {
 		// TODO Auto-generated method stub
