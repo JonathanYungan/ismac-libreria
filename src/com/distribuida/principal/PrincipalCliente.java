@@ -17,7 +17,7 @@ public class PrincipalCliente {
 		// TODO Auto-generated method stub
 //PATRON IOC INVERSION DEL CONTROL
 		
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext();
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		
 		ClienteDAO clienteDAO = context.getBean("clienteDAOImpl",ClienteDAO.class);
 		
