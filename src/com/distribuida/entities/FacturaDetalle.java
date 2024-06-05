@@ -17,7 +17,7 @@ public class FacturaDetalle {
  
  
 	public FacturaDetalle(int idFactura_detalle, int cantidad, double subtotal, int idFactura, int idLibro) {
-		super();
+		
 		this.idFactura_detalle = idFactura_detalle;
 		this.cantidad = cantidad;
 		this.subtotal = subtotal;

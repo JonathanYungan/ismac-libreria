@@ -17,9 +17,11 @@ public class Autor {
 	private String correo;
 
 	//CONSTRUCTOR 
+	public Autor() {}
+	
 	public Autor(int idAutor, String nombre, String apellido, String pais, String direccion, String telefono,
 			String correo) {
-		super();
+		
 		this.idAutor = idAutor;
 		this.nombre = nombre;
 		this.apellido = apellido;

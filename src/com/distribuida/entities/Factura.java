@@ -19,7 +19,7 @@ public class Factura {
  
 	public Factura(int idFactura, String numFactura, Date fecha, double totalNeto, double iva, double total
 		) {
-		super();
+		
 		this.idFactura = idFactura;
 		this.numFactura = numFactura;
 		this.fecha = fecha;

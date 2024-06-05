@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.distribuida.entities.Cliente;
 @Repository
 
-public class ClienteDAOompl implements ClienteDAO {
+public class ClienteDAOImpl implements ClienteDAO {
 	
 	
 	@Autowired
@@ -25,7 +25,7 @@ public class ClienteDAOompl implements ClienteDAO {
 	public List<Cliente> findALL() {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery("from Clinete", Cliente.class).getResultList();
+		return session.createQuery("from Cliente", Cliente.class).getResultList();
 	}
  
 	@Override

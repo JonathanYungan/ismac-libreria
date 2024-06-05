@@ -23,7 +23,7 @@ public class PrincipalCliente {
 		
 		List<Cliente>clientes = clienteDAO.findALL();
 				clientes.forEach(item ->{
-					System.out.print(item.toString());
+					System.out.println(item.toString());
 				});
 		
 		context.close();
