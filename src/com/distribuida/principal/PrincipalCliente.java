@@ -10,7 +10,6 @@ import com.distribuida.entities.Cliente;
 
 
 
-
 public class PrincipalCliente {
 
 	public static void main(String[] args) {
