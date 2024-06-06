@@ -45,6 +45,7 @@ public Autor(int idAutor, String nombre, String apellido, String pais, String di
 	this.direccion = direccion;
 	this.telefono = telefono;
 	this.correo = correo;
+	///dsadasds
 }
  
 public int getIdAutor() {
