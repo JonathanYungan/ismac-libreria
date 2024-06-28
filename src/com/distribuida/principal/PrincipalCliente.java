@@ -1,5 +1,6 @@
 package com.distribuida.principal;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -25,32 +26,23 @@ public class PrincipalCliente {
 		//CRUD : CREATE, READ, UPDATE, DELETE
 		
 		//ADD
-		Cliente cliente = new Cliente(0,"1712164381","Naomi","Yanez","mi casa..","0987654321","naomisa@gmail.com");
-		clienteDAO.add(cliente);
+		Cliente Cliente = new Cliente(0,"1712164381","Naomi","Yanez",new Date(),"mi casa..","0987654321","naomisa@gmail.com");
+		//clienteDAO.add(Cliente);
 		
 		//UP
-		Cliente cliente2 = new Cliente(0,"1712164381","Sofia","Yanez","mi casa.. mas adentro","0987654321","Sofia@gmail.com");
-		clienteDAO.up(cliente);
+		Cliente cliente2 = new Cliente(41,"1712164381","zofia","Yanez",new Date(),"mi casa.. mas adentro","0987654321","Sofia@gmail.com");
+		//clienteDAO.up(cliente2);
 		
 		// del
-		//clienteDAO.del(1);
+		clienteDAO.del(41);
 		//findOne
 		
-		clienteDAO.del(1);
+		
 		System.out.println("************************* DEL *************************"+clienteDAO.findOne(1));
 		//finALL
 		//List<Cliente> clientes = clienteDAO,findALL();
 		clienteDAO.findALL().forEach(item -> {System.out.println(item.toString());});
 		
-		
-		
-		
-		
-		
-		List<Cliente>clientes = clienteDAO.findALL();
-				clientes.forEach(item ->{
-					System.out.println(item.toString());
-				});
 		
 		context.close();
 		}
