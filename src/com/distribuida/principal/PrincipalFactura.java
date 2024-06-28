@@ -27,7 +27,7 @@ public class PrincipalFactura {
 		Factura factura2 = new Factura(86,"FAC-0090",new Date(),60.632,15.362,76.352);
 		factura2.setCliente(clienteDAO.findOne(40));
 		//FacturaDAO.up(factura2);
-		
+		//loscomentarios
 		//del
 		FacturaDAO.del(86);
 		//dsadasdas
