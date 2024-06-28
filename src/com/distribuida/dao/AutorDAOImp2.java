@@ -33,7 +33,7 @@ public class AutorDAOImp2 implements AutorDAO {
 		Session session = sessionFactory.getCurrentSession();
 		return session.createQuery("SELECT au FROM Autor au",Autor.class).getResultList();
 	}
-
+//comentario 
 	@Override
 	@Transactional
 	public Autor findOne(int id) {
