@@ -30,7 +30,7 @@ public class PrincipalFactura {
 		
 		//del
 		FacturaDAO.del(86);
-		
+		//dsadasdas
 		
 		System.out.println("**********************DEL***********************"+FacturaDAO.findOne(91));
 		//finAll
