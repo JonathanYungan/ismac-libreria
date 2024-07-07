@@ -18,16 +18,16 @@ public class PrincipalFacturaDetalle {
 		LibroDAO libroDAO = context.getBean("libroDAOImpl",LibroDAO.class);
 		
 		//CRUD : CREATE, READ, UPDATE, DELETE 
-		//s
+		//
 		
 		//add
-		FacturaDetalle facturadetalle = new FacturaDetalle(86,102,60.632, 0);
+		FacturaDetalle facturadetalle = new FacturaDetalle(0,10,60.63);
 		facturadetalle.setFactura(facturaDAO.findOne(1));
 		facturadetalle.setLibro(libroDAO.findOne(2));
 		facturaDetalleDAO.add(facturadetalle);
 		
 		//up
-		FacturaDetalle facturadetalle2 = new FacturaDetalle(86,102,60.632, 0);
+		FacturaDetalle facturadetalle2 = new FacturaDetalle(86,102,60.632);
 		//facturadetalle2.setFactura(facturaDAO.findOne(2));
 		//facturadetalle2.setLibro(libroDAO.findOne(8));
 		//facturaDetalleDAO.up(facturadetalle2);

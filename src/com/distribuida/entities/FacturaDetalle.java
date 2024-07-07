@@ -1,95 +1,103 @@
 package com.distribuida.entities;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Entity;
 import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-@Table(name = "factura")
-
+@Table(name="factura_detalle")
 public class FacturaDetalle {
- 
-	
-	private int idFactura_detalle;
+    // Atributos 
+	@Id 
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@Column(name="id_factura_detalle")
+	private int idFacturaDetalle;
+	@Column(name="cantidad")
 	private int cantidad;
-	private double subtotal;
-	int idFactura;
-	int idLibro;
+	@Column(name="subtotal")
+	private double subTotal;
 	
+	//Implementación de los foreyn key 
+	@JoinColumn(name="id_factura")
+	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+	private Factura factura;
+	
+	@JoinColumn(name="id_libro")
+	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+	private Libro libro;
+	//private int idFactura;
+	//private int idLibro;
 	
 	public FacturaDetalle() {}
- 
- 
-	public FacturaDetalle(int idFactura_detalle, int cantidad, double subtotal, int idFactura, int idLibro) {
-		
-		this.idFactura_detalle = idFactura_detalle;
+	//Contructor
+	public FacturaDetalle(int idFacturaDetalle, int cantidad, double subTotal) {
+	
+		this.idFacturaDetalle = idFacturaDetalle;
 		this.cantidad = cantidad;
-		this.subtotal = subtotal;
-		this.idFactura = idFactura;
-		this.idLibro = idLibro;
+		this.subTotal = subTotal;
+		//this.idFactura = idFactura;
+		//this.idLibro = idLibro;
 	}
- 
- 
-	public int getIdFactura_detalle() {
-		return idFactura_detalle;
+
+	public int getIdFacturaDetalle() {
+		return idFacturaDetalle;
 	}
- 
- 
-	public void setIdFactura_detalle(int idFactura_detalle) {
-		this.idFactura_detalle = idFactura_detalle;
+
+	public void setIdFacturaDetalle(int idFacturaDetalle) {
+		this.idFacturaDetalle = idFacturaDetalle;
 	}
- 
- 
+
 	public int getCantidad() {
 		return cantidad;
 	}
- 
- 
+
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
- 
- 
-	public double getSubtotal() {
-		return subtotal;
+
+	public double getSubTotal() {
+		return subTotal;
 	}
- 
- 
-	public void setSubtotal(double subtotal) {
-		this.subtotal = subtotal;
+
+	public void setSubTotal(double subTotal) {
+		this.subTotal = subTotal;
 	}
- 
- 
-	public int getIdFactura() {
-		return idFactura;
+
+
+	public Factura getFactura() {
+		return factura;
 	}
- 
- 
-	public void setIdFactura(int idFactura) {
-		this.idFactura = idFactura;
+
+	public void setFactura(Factura factura) {
+		this.factura = factura;
 	}
- 
- 
-	public int getIdLibro() {
-		return idLibro;
+
+	public Libro getLibro() {
+		return libro;
 	}
- 
- 
-	public void setIdLibro(int idLibro) {
-		this.idLibro = idLibro;
+
+	public void setLibro(Libro libro) {
+		this.libro = libro;
 	}
- 
- 
+	
+	//CONTRUCTOR
+
 	@Override
 	public String toString() {
-		return "FacturaDetalle [idFactura_detalle=" + idFactura_detalle + ", cantidad=" + cantidad + ", subtotal="
-				+ subtotal + ", idFactura=" + idFactura + ", idLibro=" + idLibro + "]";
+		return "FacturaDetalle [idFacturaDetalle=" + idFacturaDetalle + ", cantidad=" + cantidad + ", subTotal="
+				+ subTotal + ", factura=" + factura + ", libro=" + libro + "]";
 	}
- 
- 
+
 	
 	
-	
+
 }

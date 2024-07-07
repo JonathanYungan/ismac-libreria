@@ -1,7 +1,5 @@
 package com.distribuida.entities;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,45 +8,42 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
+
 @Component
 @Entity
-@Table (name="cliente")
+@Table(name = "cliente")
 public class Cliente {
-	
-	
 	//Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name ="id_cliente")
+	@Column(name = "id_cliente")
 	private int idCliente;
-	@Column(name ="cedula")
+	@Column(name = "cedula")
 	private String cedula;
-	@Column(name ="nombre")
+	@Column(name = "nombre")
 	private String nombre;
-	@Column(name ="apellido")
+	@Column(name = "apellido")
 	private String apellido;
-	@Column(name ="direccion")
+	@Column(name = "direccion")
 	private String direccion;
-	@Column(name ="telefono")
+	@Column(name = "telefono")
 	private String telefono;
-	@Column(name ="correo")
+	@Column(name = "correo")
 	private String correo;
-
-	//Constructor
 	
-	public Cliente() {
-		
-	}
 	
-	public Cliente(int idCliente, String cedula,String nombre,String apellido,Date fechaNacimiento,String direccion,String telefono,String correo) {
-	this.idCliente = idCliente;
-	this.cedula = cedula;
-	this.nombre = nombre;
-	this.apellido = apellido;
-	this.direccion = direccion;
-	this.telefono = telefono;
-	this.correo = correo;
+	public Cliente() {}
+	//Contructor
+	public Cliente(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono,
+			String correo) {
 		
+		this.idCliente = idCliente;
+		this.cedula = cedula;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.correo = correo;
 	}
 
 	public int getIdCliente() {
@@ -112,6 +107,7 @@ public class Cliente {
 		return "Cliente [idCliente=" + idCliente + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido="
 				+ apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + "]";
 	}
+	
 	
 	
 }

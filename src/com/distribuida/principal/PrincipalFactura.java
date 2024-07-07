@@ -29,7 +29,7 @@ public class PrincipalFactura {
 		//FacturaDAO.up(factura2);
 		//loscomentarios
 		//del
-		FacturaDAO.del(86);
+		FacturaDAO.del(40);
 		//dsadasdas
 		
 		System.out.println("**********************DEL***********************"+FacturaDAO.findOne(91));
@@ -37,7 +37,7 @@ public class PrincipalFactura {
 		//List<Factura> Facturas = FacturaDAO.findAll();
 		
 		
-		FacturaDAO.findALL().forEach(item -> {       System.out.println(item.toString());});
+		FacturaDAO.findAll().forEach(item -> {       System.out.println(item.toString());});
 		
 		context.close();
 				
