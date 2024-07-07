@@ -1,8 +1,14 @@
 package com.distribuida.entities;
 
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Entity;
 import org.springframework.stereotype.Component;
 
 @Component
+@Entity
+@Table(name = "factura")
+
 public class FacturaDetalle {
  
 	
